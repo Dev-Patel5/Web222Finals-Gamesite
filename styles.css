@@ -1,0 +1,405 @@
+/*
+*****************************************************************************
+                        WEB Final Assessment
+Full Name  : Dev Vimal Patel
+Student ID#: 160882213
+Email      : dpatel460@myseneca.ca
+Section    : NCC
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+
+
+
+font-family: 'Rubik Pixels', cursive;
+font-family: 'Tilt Prism', cursive;
+
+
+*****************************************************************************
+*/
+/* Common */
+body{
+    color:#ff5959;
+    background-color: #1a0841;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(255, 255, 255, 0.319);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.418);
+    border-radius: 7px;
+  }
+
+/* Index */
+.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ff9292;
+    z-index: 9999;
+    }
+
+    .progress-bar {
+    height: 100%;
+    background-color: #00ff95;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+    }
+    #newsletter-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+      
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="email"] {
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+      }
+      
+      .iframe-container {
+        text-align: center;
+      }
+      
+      iframe {
+        display: inline-block;
+      }
+      
+
+
+    #join-button {
+        background-color: #00ffc8;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    .hbody{
+        background-color: #323232;
+        color:#14FFEC;
+        font-size: 22px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .hbody h1, h2{
+        color: #323232;
+        text-align: center;
+        text-decoration: underline;
+        font-size: 45px;
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    .hicon-box {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        margin: 0 10px;
+        padding: 8px;
+        background: linear-gradient(90deg, #51ff06, #26ff3f, #46ffa6, #1fff9a, #67ffff);
+        background-size: 400%;
+        animation: neon-gradient 8s ease-in-out infinite;
+        color: #141414;
+    }
+    
+    .home-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        background-color: #3A1078;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        text-decoration: none;
+    }
+    
+    .hbox {
+    background-color: #0D7377;
+    padding: 10px;
+    border-radius: 14px;
+    border: 5px solid rgb(0, 55, 75);
+    margin: 20px 0;
+    }
+
+
+/* Review Page */
+.rbody{
+    background-color: #454545;
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Amatic SC', cursive;
+}
+.rbody h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 34px;
+    color: #ff7300;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE6C7;
+    border: 3px solid #cccccc;
+    border-radius: 8px;
+    border-color: #fc5400;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.review-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #241000;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #f48989;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color:#FF6000;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    background-color: #c1ffeb;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #4ffff9;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #c5ff6e;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    display: inline-block;
+    font-family: 'Tilt Prism', cursive;
+    background-color: #3dffd2;
+    color: #ff0fe7;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    transition: 1s;
+    background-color: #4fff72;
+    color: #ff4444;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.review-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #ffc55b;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    text-decoration: none;
+}
+.ricon-box {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 0 10px;
+    padding: 8px;
+    background: linear-gradient(90deg, #1d00d6, #3068ff, #1babff, #67d6ff, #78ffff);
+    background-size: 400%;
+    animation: neon-gradient 8s ease-in-out infinite;
+    color: #141414;
+}
+
+@keyframes neon-gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+i{
+font-size: 40px;
+}
+
+
+/* Info */
+.ibody{
+    background-color: #E6E5A3;
+    color:#7D8F69;
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.ibody h3{
+ color:#557153;
+ font-size: 45px;
+ font-weight: bolder;
+ text-align: center;
+}
+
+.iicon-box {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 0 10px;
+    padding: 8px;
+    background: linear-gradient(90deg, #6e06ff, #d426ff, #f946ff, #ff1f9e, #ff6785);
+    background-size: 400%;
+    animation: neon-gradient 8s ease-in-out infinite;
+    color: #141414;
+}
+
+.info-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #3A1078;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.ibox {
+background-color: #eef8a3;
+padding: 10px;
+border-radius: 14px;
+border: 5px solid #bebb00;
+margin: 20px 0;
+}
+
+/* About */
+.abody{
+    background-color: #eba7d6;
+    color:#66347F;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.abody h1, h2{
+    color: #100e1f;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aicon-box {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 0 10px;
+    padding: 8px;
+    background: linear-gradient(90deg, #ff3c06, #ff8826, #ffb246, #ffdd1f, #fff767);
+    background-size: 400%;
+    animation: neon-gradient 8s ease-in-out infinite;
+    color: #141414;
+}
+
+.about-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    background-color: #3A1078;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.box {
+background-color: #D27685;
+padding: 10px;
+border-radius: 14px;
+border: 5px solid #ff7497;
+margin: 20px 0;
+}
